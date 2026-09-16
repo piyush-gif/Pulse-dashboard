@@ -1,0 +1,16 @@
+.sidebar-container {
+  width: 20%;
+  background-color: rgba(0, 0, 0, 0.888);
+  color: white;
+  border-color: azure;
+}
+
+.sidebar-container h1 {
+  padding: 20px;
+  margin: 0;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+}

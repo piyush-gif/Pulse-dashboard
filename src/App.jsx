@@ -7,13 +7,17 @@ import Orders from "./pages/Orders";
 function App() {
   return (
     <BrowserRouter>
-      <Sidebar />
-      <Routes>
-        <Route path="/" element={<Overview />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/orders" element={<Orders />} />
-      </Routes>
+      <div style={{ display: "flex" }}>
+        <Sidebar />
+        <div style={{ flex: 1 }}>
+          <Routes>
+            <Route path="/" element={<Overview />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/orders" element={<Orders />} />
+          </Routes>
+        </div>
+      </div>
     </BrowserRouter>
   );
 }
