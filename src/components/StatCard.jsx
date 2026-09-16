@@ -1,3 +1,5 @@
+import "../styling/StatCard.css";
+
 const StatCard = ({ label, value }) => {
   return (
     <div className="stat-card">

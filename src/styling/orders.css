@@ -1,0 +1,27 @@
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-pending {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.status-shipped {
+  background: #dce7f3;
+  color: #2f5c8f;
+}
+
+.status-delivered {
+  background: #dcefe1;
+  color: #2f7a4a;
+}
+
+.status-cancelled {
+  background: var(--danger-soft);
+  color: var(--danger);
+}

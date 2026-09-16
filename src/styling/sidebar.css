@@ -1,16 +1,44 @@
 .sidebar-container {
-  width: 20%;
-  background-color: rgba(0, 0, 0, 0.888);
-  color: white;
-  border-color: azure;
+  width: 200px;
+  flex-shrink: 0;
+  height: 100vh;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 1rem;
 }
 
 .sidebar-container h1 {
-  padding: 20px;
-  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 2rem;
+  padding-left: 0.5rem;
 }
 
 .sidebar-links {
   display: flex;
   flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-links a {
+  display: block;
+  padding: 0.55rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-secondary);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+}
+
+.sidebar-links a:hover {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.sidebar-links a.active {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-left-color: var(--accent);
 }
