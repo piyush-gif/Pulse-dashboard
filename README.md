@@ -4,8 +4,7 @@ A frontend-only analytics dashboard for an e-commerce business — built to prac
 
 **[Live Demo](https://pulse-dashboard-seven-chi.vercel.app/)**
 
-![Overview screenshot]
-(./assets/Overview.png)
+![Overview screenshot](./assets/Overview.png)
 
 ## What it does
 
