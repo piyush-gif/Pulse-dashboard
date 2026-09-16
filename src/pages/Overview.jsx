@@ -2,6 +2,7 @@ import StatCard from "../components/StatCard";
 import useCart from "../hooks/useCart.jsx";
 import useProducts from "../hooks/useProducts.jsx";
 import { BarChart, Bar, XAxis, YAxis, Tooltip } from "recharts";
+import "../styling/overview.css";
 
 const Overview = () => {
   const { products, loading: productsLoading } = useProducts();
@@ -40,31 +41,31 @@ const Overview = () => {
   return (
     <div>
       <h1>Overview</h1>
-      <div>
+      <div className="stat-grid">
         <StatCard label="Total Revenue" value={`$${totalRevenue.toFixed(2)}`} />
         <StatCard label="Total Orders" value={totalOrders} />
         <StatCard label="Products" value={totalProducts} />
         <StatCard label="Avg Order" value={`$${avgOrderValue.toFixed(2)}`} />
       </div>
 
-      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-        <div>
+      <div className="chart-row">
+        <div className="chart-panel">
           <h2>Top Categories</h2>
           <BarChart width={380} height={250} data={categoryData}>
-            <XAxis dataKey="category" />
-            <YAxis />
+            <XAxis dataKey="category" stroke="#5C6B7A" fontSize={12} />
+            <YAxis stroke="#5C6B7A" fontSize={12} />
             <Tooltip />
-            <Bar dataKey="count" fill="#3D5A47" />
+            <Bar dataKey="count" fill="#B5762A" radius={[4, 4, 0, 0]} />
           </BarChart>
         </div>
 
-        <div>
+        <div className="chart-panel">
           <h2>Products by Price Range</h2>
           <BarChart width={380} height={250} data={priceRangeData}>
-            <XAxis dataKey="range" />
-            <YAxis />
+            <XAxis dataKey="range" stroke="#5C6B7A" fontSize={12} />
+            <YAxis stroke="#5C6B7A" fontSize={12} />
             <Tooltip />
-            <Bar dataKey="count" fill="#8A8F5C" />
+            <Bar dataKey="count" fill="#B5762A" radius={[4, 4, 0, 0]} />
           </BarChart>
         </div>
       </div>
